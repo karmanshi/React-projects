@@ -7,18 +7,19 @@ import BGChanger from './Components/BGChanger';
 import CaseConertor from './Components/CaseConertor';
 import SimpleInterestCalculator from './Components/SimpleInterestCalculator';
 import PasswordGenerator from './Components/PasswordGenerator';
+import Navigation from './Components/Navigation'
 
 function App() {
   return (
     <>
     <Routes>
-        <Route path="/" element={<Home/>}>
+      <Route path="/" element={<Navigation/>}>
+        <Route path="/home" element={<Home/>}/>
         <Route path="/basic-calculator/" element={<BasicCalculator />} />
         <Route path="/si-calculator/" element={<SimpleInterestCalculator/>} />
         <Route path="/bg-changer/" element={<BGChanger />} />
         <Route path="/case-convertor/" element={<CaseConertor />} />
         <Route path="/password-generator/" element={<PasswordGenerator />} />
-        
           
         </Route>
       </Routes>
