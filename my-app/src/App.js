@@ -7,7 +7,7 @@ import BGChanger from './Components/BGChanger';
 import CaseConertor from './Components/CaseConertor';
 import SimpleInterestCalculator from './Components/SimpleInterestCalculator';
 import PasswordGenerator from './Components/PasswordGenerator';
-import Navigation from './Components/Navigation'
+import Navigation from './Components/CommonComponents/Navigation'
 
 function App() {
   return (
