@@ -1,7 +1,7 @@
 import React from 'react'
 import option from './Option'
 import DropDown from './DropDown'
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import { Decimal_Binary, Decimal_Octal, Binary_Decimal,Octal_Decimal,Decimal_Hexa,Hexa_Decimal} from './Logic'
 
 
@@ -83,9 +83,9 @@ const Convertor = () => {
         setBaseOutput(response)
     };
 
-
-
-
+    useEffect(() => {
+        document.title = "Base-Convertor";
+      }, []); 
 
     return (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6  lg:px-4 ">

@@ -1,7 +1,11 @@
 import React from 'react'
 import { data } from './ComponentList'
+import { useEffect } from 'react'
 import Card from './CommonComponents/Card'
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home";
+  }, []); 
   return (
     <>
       <div className='flex flex-col justify-center items-center p-5 '>

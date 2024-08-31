@@ -1,7 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 const BGChanger = () => {
     const [color,setColor] =useState('olive')
+    useEffect(() => {
+      document.title = "BG-Changer";
+    }, []); 
+
   return (
     <div className='w-full h-screen 'style={{backgroundColor: color }}>
     <div className='fixed flex  justify-center bottom-12 inset-x-0 px-2'>

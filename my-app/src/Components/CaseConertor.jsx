@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 const CaseConertor = () => {
     const [input, setInput] = useState("")
@@ -43,6 +43,11 @@ const CaseConertor = () => {
   const handleReset = () =>{
     setInput('')
   }
+
+  useEffect(() => {
+    document.title = "Case-Convertor";
+  }, []); 
+
   return (
     <div>
       <form className='m-5 p-5'>

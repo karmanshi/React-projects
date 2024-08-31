@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <div className='bg-black min-h-screen'>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="sticky top-0 bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="https://flowbite.com/"

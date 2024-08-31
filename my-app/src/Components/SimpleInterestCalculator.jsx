@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 const SimpleInterestCalculator = () => {
     const [principal, setPrincipal] = useState('')
     const [rate, setRate] = useState('')
@@ -28,6 +28,10 @@ const SimpleInterestCalculator = () => {
         setOutput(total.toFixed(2))
       }
     }
+
+    useEffect(() => {
+      document.title = "Simple-Interest-Calculator";
+    }, []); 
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
     <h1 className='text-white text-center my-3 text-xl	font-bold'>Simple Interest</h1>

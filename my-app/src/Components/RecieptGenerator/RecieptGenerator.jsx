@@ -62,6 +62,7 @@ const Reciept = () => {
 
     useEffect(() => {
         localStorage.setItem('products', JSON.stringify(productList))
+        document.title = 'Reciept-Generator'
     }, [productList]);
 
     return (

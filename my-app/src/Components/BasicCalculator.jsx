@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 const BasicCalculator = () => {
     const [number1, setNumber1] = useState('')
   const [number2, setNumber2] = useState('')
@@ -30,7 +30,13 @@ const BasicCalculator = () => {
     setNumber2('')
     setOutput('')
   }
+
+  useEffect(() => {
+    document.title = "Basic-Calculator";
+  }, []); 
+
   return (
+    
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
     <h1 className='text-white text-center my-3 text-xl	font-bold'>Calculator</h1>
     <div className="flex shadow rounded-lg overflow-hidden mb-4">

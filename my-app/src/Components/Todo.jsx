@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Todo = () => {
   const [addData, setAddData] = useState('')
@@ -28,6 +28,10 @@ const Todo = () => {
     setTodo([...editItem])
 
   }
+
+  useEffect(() => {
+    document.title = "Todo";
+  }, []); 
 
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">

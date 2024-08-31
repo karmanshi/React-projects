@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import { total_Number_Words, total_Number_character, total_Number_Spaces, Unique_Words, Unique_Characters} from "./Logic"
 const Analysis = () => {
   const [textInput, setTextInput] = useState('')
@@ -30,6 +30,10 @@ const Analysis = () => {
     setUniqueWord('')
     setUniqueCharacter('')
   }
+
+  useEffect(() => {
+    document.title = "String-Analyzer";
+  }, []); 
 
 
 
