@@ -28,5 +28,29 @@ export const data =[
         img : "",
         description: 'It will generate random password according to length. It will include special-character and numbers.',
         url: '/password-generator/'
-    }
+    },
+    {
+        name: 'String-Analysis',
+        img : "",
+        description: 'It will perform analysis on the string like count words, character spaces, unique word and unique character.',
+        url: '/string-analysis/'
+    },
+    {
+        name: 'Reciept-Generator',
+        img : "",
+        description: 'It will generate reciept for the products that you have added on it. It store data in local storage.',
+        url: '/reciept-generator/'
+    },
+    {
+        name: 'Todo',
+        img : "",
+        description: 'It will add daily task and update the task.',
+        url: '/todo/'
+    },
+    {
+        name: 'Base-Convertor',
+        img : "",
+        description: 'It will perform calculation like binary to decimal, binary to hexadecimal, decimal to octal etc.',
+        url: '/base-convertor/'
+    },
 ]
