@@ -43,8 +43,8 @@ const Analysis = () => {
       <form className='m-5 p-5'>
         <div className="w-full  border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
           <div className="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
-            <div className="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse dark:divide-gray-600">
-              <div className="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4 font-semibold text-lg">
+            <div className="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse dark:divide-gray-600 ">
+              <div className="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4  font-semibold text-lg">
               String Analysis
               </div>
 
@@ -87,14 +87,14 @@ const Analysis = () => {
         <div>
           <label
             htmlFor="first_name"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md font-medium text-gray-200 dark:text-white"
           >
             Words
           </label>
           <input
             type="text"
             id="word"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="words"
             required=""
             value={words}
@@ -104,14 +104,14 @@ const Analysis = () => {
         <div>
           <label
             htmlFor="first_name"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md font-medium text-gray-200 dark:text-white"
           >
             Character
           </label>
           <input
             type="text"
             id="word"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="character"
             required=""
             value={character}
@@ -121,14 +121,14 @@ const Analysis = () => {
         <div>
           <label
             htmlFor="first_name"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md font-medium text-gray-200 dark:text-white"
           >
             Space
           </label>
           <input
             type="text"
             id="word"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="space"
             required=""
             value={spaces}
@@ -138,14 +138,14 @@ const Analysis = () => {
         <div>
           <label
             htmlFor="first_name"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md font-medium text-gray-200 dark:text-white"
           >
             Unique Words
           </label>
           <input
             type="text"
             id="word"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="unique words"
             required=""
             value={uniqueWord}
@@ -155,14 +155,14 @@ const Analysis = () => {
         <div>
           <label
             htmlFor="first_name"
-            className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-md font-medium text-gray-200 dark:text-white"
           >
             Unique Character
           </label>
           <input
             type="text"
             id="word"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="unique character"
             required=""
             value={uniqueCharacter}

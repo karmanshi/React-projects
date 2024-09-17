@@ -1,83 +1,85 @@
 import React from 'react'
-import { data } from './Data/ComponentList'
+import  {data}  from './Data/ComponentList'
 import { useEffect, useState } from 'react'
 import Card from './CommonComponents/Card'
 import Heading from './Heading'
-import { SectionContainer } from './Heading'
+import { SectionContainer, ParentContainer } from './Heading'
 import { resumeData } from './Data/ResumeData'
 import { SkillList } from './Data/skillList'
+import Resume from '../images/Resume-Karmanshi-Shrivastava.pdf'
 const Home = () => {
 
   const texts = [
     " React developer.",
     " Frontend developer.",
-    
+
   ];
 
   const [currentText, setCurrentText] = useState(texts[0]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentText((prevText) => {
-        const currentIndex = texts.indexOf(prevText);
-        const nextIndex = (currentIndex + 1) % texts.length;
-        return texts[nextIndex];
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
+    document.title = "Home";
   }, []);;
 
-  useEffect(() => {
-    document.title = "Home";
-  }, []);
   return (
     <>
-      <div className='flex flex-col justify-center items-center p-5 '>
-        <div >
+      <div className='w-4/5 flex flex-col justify-start items-center p-5 '>
+        {/* Home Component */}
+        <ParentContainer id="home">
           <SectionContainer>
             <div className=' justify-left items-left text-white text-4xl	text-left'>
-              <span>Hello it's me <br/> Karmanshi Shrivastava <br/> I'm a  {currentText}</span>
+              <span>Hello it's me <br /> Karmanshi Shrivastava <br /> I'm a  {currentText}</span>
+              <a href={Resume} target='_blank' download={true} className="mt-6 flex items-center justify-center text-lg rounded-full border-4 bg-transparent hover:bg-white text-white font-semibold py-2 px-4 border border-white hover:text-black">
+                Download Resume
+              </a>
             </div>
-          </SectionContainer>
-         
-        </div>
 
-        <div >
+          </SectionContainer>
+        </ParentContainer>
+
+        {/* About Component */}
+        <ParentContainer id="about">
           <Heading title="About" />
           <SectionContainer>
-            <div className='grid grid-cols-4 gap-2 w-5/6'>
-              <div className='col-span-1'>
-                <img className='w-40 h-40' src='https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/521.png' />
+            <div className='grid grid-cols-2 gap-2' >
+              <div className='flex items-center justify-center '>
+                <img className='h-80' src='https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/521.png' />
               </div>
-              <div className='col-span-3 text-white text-justify'><span>Hello I'm Karmanshi</span> Experienced frontend developer skilled in ReactJS, Tailwind CSS, TypeScript, and Next.js. I build scalable, responsive web apps with a focus on clean code, seamless UI, and efficient API integration. Proficient in deploying via GitHub and Vercel, I’m passionate about using modern tools to enhance performance and user experience. Open to opportunities that promote growth and leverage my expertise in cutting-edge web technologies.</div>
+              <div className=' text-white text-justify p-6 leading-loose  text-lg   rounded-lg' style={{ boxShadow: "rgba(80, 78, 78, 0.3) -8px -12px 10px 10px" }}>
+                <span>Hello I'm Karmanshi</span> Experienced frontend developer skilled in ReactJS, Tailwind CSS, TypeScript, and Next.js. I build scalable, responsive web apps with a focus on clean code, seamless UI, and efficient API integration. Proficient in deploying via GitHub and Vercel, I’m passionate about using modern tools to enhance performance and user experience. Open to opportunities that promote growth and leverage my expertise in cutting-edge web technologies.
+              </div>
             </div>
           </SectionContainer>
-        </div>
+        </ParentContainer>
 
-        <div >
+        {/* Experience Component */}
+        <ParentContainer id="experience">
           <Heading title="Experience" />
           <SectionContainer>
-            <div className='flex flex-col  items-center w-5/6 text-black '>
+            <div className='flex flex-col items-center text-white '>
               {resumeData.map((ele) => {
-                return <div className="flex mt-6 transition ease-in-out delay-300 hover:scale-110 rounded-lg bg-gray-200 text-surface shadow-secondary-1 w-3/5 bg-gray-200 shadow-md shadow-gray-200/50">
-                  <img
-                    className="p-2 h-80 w-48 rounded-t-lg  md:h-auto md:w-48 md:!rounded-none md:!rounded-s-lg"
-                    src={ele.companyIcon}
-                    alt=""
-                  />
-                  <div className="flex flex-col justify-start p-6 text-left">
-                    <h5 className="text-xl font-bold ">{ele.position}</h5>
-                    <p className=" text-sm font-semibold">
+                return <div className="grid grid-cols-4 my-4 py-3 px-3 rounded-lg "
+                  style={{ boxShadow: "rgba(80, 78, 78, 0.5) 0px 0px 10px 10px" }}  >
+                  {/* transition ease-in-out delay-300 hover:scale-110  */}
+                  <div>
+                    <img
+                      className="p-2 h-80 w-48 rounded-t-lg md:h-auto md:w-48 md:!rounded-none md:!rounded-s-lg"
+                      src={ele.companyIcon}
+                      alt=""
+                    />
+                  </div>
+                  <div className="col-span-3 p-3">
+                    <h5 className="text-2xl font-bold ">{ele.position}</h5>
+                    <p className=" text-medium font-semibold">
                       <span className='text-lg'	>{ele.companyName}</span> -  {ele.jobnature}
                     </p>
-                    <p className="text-sm text-surface/75 font-semibold ">
+                    <p className="text-medium text-surface/75 font-semibold ">
                       {ele.jobLocation} - {ele.mode}
                     </p>
-                    <p className="text-xs text-surface/75 ">
+                    <p className="mt-1 text-sm text-surface/75 ">
                       {ele.duration}
                     </p>
-                    <p className="text-xs text-surface/75 mt-2 font-medium ">
+                    <p className="text-medium text-surface/75 mt-2 font-lg ">
                       {ele.Description}
                     </p>
                   </div>
@@ -85,24 +87,25 @@ const Home = () => {
 
               })}
             </div>
-
-
           </SectionContainer>
-        </div>
+        </ParentContainer>
 
-        <div >
+        {/* Skills Component */}
+        <ParentContainer id="skills">
           <Heading title="Skills" />
           <SectionContainer>
-            <div className='flex flex-rows flex-wrap gap-4 justify-center items-center w-5/6 text-black '>
+            <div className='flex flex-rows flex-wrap gap-8 justify-center  items-center'>
               {SkillList.map((ele) => {
-                return <div className="flex flex-col mt-6 transition ease-in-out delay-300 hover:scale-110 rounded-lg bg-gray-200 text-surface shadow-secondary-1 w-40 shadow-md shadow-gray-200/50 h-48 justify-center items-center pt-4 ">
-                  <img
-                    className="p-2 h-32 w-36 rounded-t-lg"
-                    src={ele.img}
-                    alt=""
-                  />
-                  <div className="flex flex-col justify-start p-6 text-left">
-                    <p className=" text-sm font-semibold text-black">
+                return <div className=" flex flex-col item-center py-3 px-3 rounded-lg" >
+                  <div className='flex item-center'>
+                    <img
+                      className="p-2 h-20 w-36 rounded-t-lg "
+                      src={ele.img}
+                      alt=""
+                    />
+                  </div>
+                  <div className="flex flex-col justify-start p-6 text-center">
+                    <p className=" text-sm font-semibold text-white">
                       <span className='text-lg'	>{ele.name}</span>
                     </p>
                   </div>
@@ -110,28 +113,35 @@ const Home = () => {
               })}
             </div>
           </SectionContainer>
-        </div>
+        </ParentContainer>
 
-        <div >
+        {/* Projects Component */}
+        <ParentContainer id="project">
           <Heading title="Projects" />
           <SectionContainer>
-            {data.map((element) => { return <Card name={element.name} description={element.description} image={element.img} Url={element.url} /> })}
-          </SectionContainer>
-        </div>
+            <div className='grid grid-cols-2 gap-7 '>
+              {data.map((element) => { return <Card name={element.name} description={element.description} image={element.img} Url={element.url} /> })}
+            </div>
 
-        <div >
+          </SectionContainer>
+        </ParentContainer>
+
+        {/* Contact Component */}
+        <ParentContainer id="contact">
           <Heading title="Contact Me" />
-          <SectionContainer>
-            <div className='flex flex-rows gap-4 '>
-              <div className="flex flex-col  p-6 text-left">
-                <p className="flex text-2xl font-semibold text-white item-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-white mr-4">
+          <SectionContainer alignment='start'>
+            <div className='flex flex-col items-center'>
+              <p className="text-2xl font-semibold text-white">
+                <p className='flex items-center gap-2'>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                   </svg>
-                  Email <a href="mailto:shrivastavakarmanshi2002@gmail.com" className="ml-4 text-blue-300 hover:text-blue-700">shrivastavakarmanshi2002@gmail.com</a>
+                  Email
+                  <a href="mailto:shrivastavakarmanshi2002@gmail.com" className="text-blue-300 hover:text-blue-700">shrivastavakarmanshi2002@gmail.com</a>
                 </p>
-                <div className='flex flex-rows flex-wrap gap-4 justify-center items-center '>
-                <p className="flex text-lg font-semibold text-white item-center">
+              </p>
+              <p className='flex items-center gap-2'>
+                <p className="text-lg font-semibold text-white">
                   <a href="https://www.linkedin.com/in/karmanshi-shrivastava-82265a222" target='_blank' className="ml-1 text-blue-300 hover:text-blue-700">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +164,7 @@ const Home = () => {
 
                   </a>
                 </p>
-                <p className="flex text-lg font-semibold text-white item-center ">
+                <p className="text-lg font-semibold text-white">
                   <a href="https://github.com/karmanshi/" target='_blank' className="ml-1 text-blue-300 hover:text-blue-700">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -195,11 +205,10 @@ const Home = () => {
                     </svg>
                   </a>
                 </p>
-                </div>
-              </div>
+              </p>
             </div>
           </SectionContainer>
-        </div>
+        </ParentContainer>
 
 
       </div>

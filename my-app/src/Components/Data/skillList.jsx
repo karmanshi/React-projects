@@ -28,7 +28,7 @@ export const SkillList =
     },
     {
         name : 'Github',
-        img:'https://cdn.worldvectorlogo.com/logos/github-icon.svg'
+        img:'https://img.icons8.com/?id=62856&format=png&color=ffffff'
     },
     {
         img:'https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg',
