@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <div>
       <div
-        className="grid grid-cols-4  items-center text-white border border-gray-200 rounded-lg  h-56 px-3  py-2 " style={{ boxShadow: "rgba(80, 78, 78, 0.5) 0px 0px 10px 10px" }}
+        className="grid grid-cols-4  items-center text-white  shadow-lg shadow-gray-700/50 rounded-lg  h-56 px-3  py-2 " 
       >
         <div className='col-span-1 bg-white' >
           
@@ -24,7 +24,7 @@ const Card = (props) => {
             {props.description}
           </p>
           <Link to={props.Url}>
-            <button type="button" className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">{props.name}</button>
+            <button type="button" className="mt-1 flex items-center justify-center text-base rounded-full border-2 bg-transparent hover:bg-white text-white font-semibold py-2 px-4 border border-white hover:text-black">Visit Site</button>
 
           </Link>
         </div>

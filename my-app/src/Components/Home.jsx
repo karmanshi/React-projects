@@ -59,8 +59,7 @@ const Home = () => {
             <div className='flex flex-col items-center text-white '>
               {resumeData.map((ele) => {
                 return <div className="grid grid-cols-4 my-4 py-3 px-3 rounded-lg "
-                  style={{ boxShadow: "rgba(80, 78, 78, 0.5) 0px 0px 10px 10px" }}  >
-                  {/* transition ease-in-out delay-300 hover:scale-110  */}
+                  style={{boxShadow: "rgba(80, 78, 78, 0.5) 0px 0px 10px 10px"}}>
                   <div>
                     <img
                       className="p-2 h-80 w-48 rounded-t-lg md:h-auto md:w-48 md:!rounded-none md:!rounded-s-lg"
