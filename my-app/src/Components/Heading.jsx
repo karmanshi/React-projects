@@ -2,7 +2,7 @@ import React from 'react'
 
 export const ParentContainer=({id, children})=>{
     return (
-        <div className='mb-5 py-2.5 w-full font-sans' id={id}>
+        <div className='mb-5 py-2.5 w-full font-sans' id={id} style={{scrollMarginTop:"50px"}}>
         {children}
         </div>
     )
