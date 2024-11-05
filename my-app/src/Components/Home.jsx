@@ -43,7 +43,7 @@ const Home = () => {
           <SectionContainer>
             <div className='grid grid-cols-2 gap-2' >
               <div className='flex items-center justify-center '>
-                <img className='h-80' src='https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/521.png' />
+                <img className='h-80' src='https://karmanshi.github.io/Portfolio/asset/My.jpg' />
               </div>
               <div className=' text-white text-justify p-6 leading-loose  text-lg   rounded-lg' style={{ boxShadow: "rgba(80, 78, 78, 0.3) -8px -12px 10px 10px" }}>
                 <span>Hello I'm Karmanshi</span> Experienced frontend developer skilled in ReactJS, Tailwind CSS, TypeScript, and Next.js. I build scalable, responsive web apps with a focus on clean code, seamless UI, and efficient API integration. Proficient in deploying via GitHub and Vercel, I’m passionate about using modern tools to enhance performance and user experience. Open to opportunities that promote growth and leverage my expertise in cutting-edge web technologies.
